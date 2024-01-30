@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router';
-import { ButtonHTMLAttributes, FC, ReactElement } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { useRouter } from "next/router";
+import { ButtonHTMLAttributes, FC, ReactElement } from "react";
+import { twMerge } from "tailwind-merge";
 
 export enum ButtonVariant {
-  SOLID = 'solid',
-  OUTLINE = 'outline',
+  SOLID = "solid",
+  OUTLINE = "outline",
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -16,7 +16,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<ButtonProps> = ({
   children,
-  className = '',
+  className = "",
   text,
   to,
   icon,
@@ -29,10 +29,10 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       className={twMerge(
-        'button flex items-center justify-center p-5 font-extrabold shadow',
+        "button flex rounded-lg items-center justify-center p-3 font-extrabold shadow",
         // icon && 'flex items-center justify-between'
-        variant === ButtonVariant.SOLID && 'bg-brand-1 text-white',
-        variant === ButtonVariant.OUTLINE && 'text-brand-1',
+        variant === ButtonVariant.SOLID && "bg-brand-1 text-white",
+        variant === ButtonVariant.OUTLINE && "text-brand-1",
         className
       )}
       onClick={to ? () => router.push(to) : onClick}

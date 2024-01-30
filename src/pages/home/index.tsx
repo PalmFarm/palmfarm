@@ -117,8 +117,8 @@ export default function Home() {
         <div>
           <p className="">농촌 생활 컨텐츠</p>
 
-          {/* Link tag로 감싸면 이미지 사이즈가 화면 폭에 맞게 조정됨ㅠ -> 해결 필요
-          <div className="flex overflow-x-scroll hide-scrollbar py-3.5">
+          {/* Link tag로 감싸면 이미지 사이즈가 화면 폭에 맞게 조정됨ㅠ -> 해결 필요*/}
+          {/* <div className="flex overflow-x-scroll hide-scrollbar py-3.5">
             <Link
               className="flex-nowrap mx-3"
               href="https://youtu.be/dLBWVtO1d2c?si=5g-t90Y3V3vKozCG"
@@ -161,8 +161,8 @@ export default function Home() {
           </div> */}
 
           <div className="flex flex-nowrap space-x-6 overflow-x-scroll hide-scrollbar py-3.5">
-            {/* 컴포넌트화 필요 */}
-            {/* <Link href="https://youtu.be/dLBWVtO1d2c?si=5g-t90Y3V3vKozCG"> */}
+            {/* 컴포넌트화 필요
+            <Link href="https://youtu.be/dLBWVtO1d2c?si=5g-t90Y3V3vKozCG"> */}
             <Image
               src="/assets/imgs/thumbnail1.png"
               alt="전과자 농활"
@@ -171,8 +171,8 @@ export default function Home() {
               height={102}
               priority
             />
-            {/* </Link> */}
-            {/* <Link href="https://youtu.be/H6BjkYTWgg4?si=AmiFdfa35a8Bl046"> */}
+            {/* </Link>
+            <Link href="https://youtu.be/H6BjkYTWgg4?si=AmiFdfa35a8Bl046"> */}
             <Image
               src="/assets/imgs/thumbnail2.png"
               alt="한국외대 농활"
@@ -198,8 +198,8 @@ export default function Home() {
 
       <div className="border-b-8 border-slate-100 px-5 py-6">
         <p className="">관심 목록</p>
-        <div className="flex space-x-2 py-3.5">
-          <div className="bg-no-repeat bg-center flex w-full items-stretch py-3 px-2 rounded-xl shadow-md">
+        <div className="flex space-x-2 justify-between py-3.5">
+          <div className="bg-center flex py-3 px-2 rounded-xl shadow-md">
             <Image
               src="/assets/imgs/sweetPotato.png"
               alt="PalmFarm Text Logo"
@@ -215,7 +215,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <p className="self-center text-sm overflow-x-hidden">더 보기{">"}</p>
+          <p className="mx-0.5 text-nowrap self-center text-sm overflow-x-hidden">
+            더 보기 {">"}
+          </p>
         </div>
       </div>
 

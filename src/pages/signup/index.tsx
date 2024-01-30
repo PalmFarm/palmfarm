@@ -5,6 +5,7 @@ import TextField from "src/components/input/TextField";
 import { Inter } from "next/font/google";
 import { useAuth } from "src/hooks";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 interface FormValues {
@@ -14,6 +15,7 @@ interface FormValues {
 }
 
 export default function Signup() {
+  const router = useRouter();
   //   const { signup } = useAuth();
   const {
     register,
@@ -21,11 +23,9 @@ export default function Signup() {
     formState: { errors },
   } = useForm<FormValues>();
 
-  const router = useRouter();
-
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-between p-16 ${inter.className}`}
     >
       <div className="relative grid justify-items-center gap-6 content-center">
         <Image
@@ -46,7 +46,7 @@ export default function Signup() {
         />
         <>
           <form
-            className="flex flex-col space-y-6 p-4"
+            className="flex flex-col space-y-6"
             // onSubmit={handleSubmit((data) => signup(data))}
           >
             <div className="mb-4 flex flex-col gap-6">
@@ -124,12 +124,12 @@ export default function Signup() {
             />
 
             <Button text="회원가입" className="filled-brand-1" /> */}
-            <button
+            <Link
               className="bg-brand-1 text-white flex rounded-lg items-center justify-center p-3 font-extrabold shadow"
-              onClick={() => router.push("/home")}
+              href="/home"
             >
               회원가입
-            </button>
+            </Link>
           </form>
         </>
       </div>

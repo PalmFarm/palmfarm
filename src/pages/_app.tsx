@@ -3,7 +3,7 @@ import "../styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className="p-5">
+    <main>
       <Component {...pageProps} />
     </main>
   );

@@ -23,9 +23,9 @@ const TextField = (
         {label && <label className="label">{label}</label>}
         <div
           className={twMerge(
-            "relative flex w-full flex-row items-center rounded-lg border transition-all hover:border-slate-900",
+            "relative flex w-full flex-row items-center p-3 rounded-lg border transition-all hover:border-slate-500",
             helper && "border-red-500 hover:border-red-500",
-            !helper && isFocused && "border-slate-900",
+            !helper && isFocused && "border-slate-700",
             !helper && !isFocused && "border-slate-200",
             disabled &&
               "border-slate-200 bg-slate-100 text-slate-400 hover:border-slate-200",
@@ -40,7 +40,7 @@ const TextField = (
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             className={twMerge(
-              "h-full w-full rounded-lg px-2 py-1 text-slate-900 placeholder:text-[#90E0C2] disabled:text-slate-500"
+              "h-full w-full rounded-lg px-2 py-1 text-slate-900 placeholder:text-slate-300 disabled:text-slate-500"
             )}
           />
           {isSuccess && (
